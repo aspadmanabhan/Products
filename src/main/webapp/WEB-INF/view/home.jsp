@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!DOCTYPE html>
+
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -10,13 +11,12 @@
 <body>
 <html>
 <head>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="<c:url value="/resources/css/bootstrap/css/bootstrap.min.css" />">
 
 <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
+<script src='<c:url value='/resources/jquery/jquery.min.js' />'></script>
 <!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="<c:url value="/resources/css/bootstrap/js/bootstrap.min.js" />"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">	
 </head>
 <body>
@@ -33,8 +33,9 @@ Ecommerce Application
 	
 	<li style="background-color:aqua;border-style:solid;"><a href="#">Contact Us</a>
 	<li><a href="#"style="background-color:aqua;border-style:solid;" >About Us</a>
-	<li><a href="Login.jsp"style="background-color:aqua;border-style:solid;" >Login</a>
-	<li><a href="Register.jsp"style="background-color:aqua;border-style:solid;" >Register</a>
+	<li><a href='<c:url value='first?pr=all'/>' style="background-color:aqua;border-style:solid;" >View All</a>
+	<li><a href='<c:url value='Login'/>' style="background-color:aqua;border-style:solid;" >Login</a>
+	<li><a href='<c:url value='Register'/>' style="background-color:aqua;border-style:solid;" >Register</a>
 	</ul>
 </div>
 </nav>
@@ -48,11 +49,14 @@ Ecommerce Application
 <div class="carousel-inner" roles="listbox" style=" width:70%; height: 390px;">
 
  <div class="item active" style="margin-top:4%;margin-bottom:3%">
- <img src="image1.jpg" width="900px"  height="400px" />
+ 
+ <img src="<c:url value="/resources/images/image1.jpg" />" alt="" width="100%" />
+
 
  </div>
  <div class="item" style="margin-top:4%;margin-bottom:3%">
- <img src="image2.jpg" width="100%"  height="190px"/>
+ <img src="<c:url value="/resources/images/image2.jpg" />" alt="" width="100%" />
+ 
  </div>
 </div>
 <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
@@ -68,13 +72,13 @@ Ecommerce Application
 <br/>
 <div class="row">
 <div class="col-sm-4">
-<a href="first.jsp">	<img src="image7.jpg"  width="380px" height="240px"/></a>
+<a href='<c:url value='first?pr=ooty'/>'>	<img src="<c:url value="/resources/images/image7.jpg" />"  width="380px" height="240px"/></a>
 </div>
 <div class="col-sm-4">
-<a href="second.jsp"><img src="image3.jpg"  width="370px" height="240px"/></a>
+<a href='<c:url value='first?pr=shimla'/>'><img src="<c:url value="/resources/images/image3.jpg" />"  width="370px" height="240px"/></a>
 </div>
 <div class="col-sm-4"></div>
-<a href="third.jsp"><img src="image4.jpg" width="370px" height="240px"/></a>
+<a href='<c:url value='first?pr=kashmir'/>'><img src="<c:url value="/resources/images/image4.jpg" />" width="370px" height="240px"/></a>
 
 </div>
 
